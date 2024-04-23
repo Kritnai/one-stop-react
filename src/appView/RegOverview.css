@@ -1,0 +1,59 @@
+.RegOverview {
+    background-color: white;
+}
+
+.personal-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5%;
+
+}
+
+.student-info {
+    padding: 3%;
+    border-radius: 5px;
+    background-color: #ECB159;
+}
+
+.num-info {
+    display: grid;
+    margin: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    text-align: center;
+}
+
+.name-element,
+.pro-element,
+.info-element {
+    width: 100%;
+    padding: 3%;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.registry {
+    margin: 5%;
+}
+
+.registry button {
+    width: 100%;
+}
+
+.reg-scheduletable,
+th,
+td {
+    border: 1px solid;
+    text-align: left;
+    padding: 1%;
+}
+
+.reg-schedule th {
+    background-color: #5C8374;
+}
+
+.reg-schedule table {
+    margin-top: 2%;
+    width: 100%;
+    border-collapse: collapse;
+}

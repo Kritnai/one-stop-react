@@ -1,0 +1,17 @@
+.occupationSupport{
+    background: linear-gradient(to bottom left, #33ccff 0%, #ff99cc 100%);
+}
+.intern {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5%;
+    text-align: center;
+
+}
+
+.sandbox a, .jobfair a {
+    margin: 10px;
+    text-decoration: none;
+    color: black;
+}
+

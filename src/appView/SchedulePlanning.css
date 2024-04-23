@@ -1,0 +1,49 @@
+.SchedulePlanning {
+    background-color: white;
+}
+
+.planning {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5%;
+}
+
+.searchbar {
+    width: 100%;
+    height: 30px;
+    padding: 2%;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 20px;
+
+}
+
+.underline{
+    
+    border: 1px solid black;
+}
+
+.plan-col-left, .plan-col-right{
+    padding: 3%;
+    /* background-color: #41B06E; */
+    background-color: #555;
+
+    border-radius: 10px;
+}
+
+.plan-col-right button{
+    margin: 0;
+    margin-top: 10px;
+    
+    width: 100%;
+}
+
+.plan-bg{
+    padding: 2%;
+    border-radius: 5px;
+
+    background-color: whitesmoke;
+    
+}

@@ -1,0 +1,44 @@
+section{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+h1{
+    margin-bottom: 3%;
+    
+}
+
+
+.mentel-health-item{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 16px;
+}
+.box-content{
+    display: flex;
+    padding: 2%;
+    background-color: #8CB9BD;
+}
+
+.boxleft{
+    width: 30%;
+}
+
+.boxright{
+    background-color: #5C8374;
+    padding: 1%;
+    width: 100%;    
+}
+
+.boxdata{
+    height: 100%;
+    background-color: #F5F5F5;
+    padding-left: 1%;
+    
+    line-height: 400%;
+}
+
+.scale-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

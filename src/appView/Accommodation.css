@@ -1,0 +1,26 @@
+.accommodation h3{
+    /* color: white; */
+    font-size: 24px;
+    font-weight: 100;
+    
+}
+
+.dormitory {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    column-gap: 10px;
+    row-gap: 10px;
+    text-align: center;
+    padding: 10px;
+
+}
+
+.accommodation-content {
+    display: grid;
+    margin: 2%;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 20px;
+    column-gap: 20px;
+
+   
+}

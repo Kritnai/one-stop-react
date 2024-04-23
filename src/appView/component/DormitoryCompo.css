@@ -1,0 +1,44 @@
+.dormitory-item {
+    padding: 2px;
+
+    background: rgba(255, 255, 255, 0.5);
+    -webkit-backdrop-filter: blur(21px);
+    backdrop-filter: blur(21px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    -webkit-box-shadow: 3px 3px 10px 3px #ddd;
+    -moz-box-shadow: 3px 3px 10px 3px #ddd;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.dormitory-post {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dormitory-post-bg {
+    background-color: rgba(0, 0, 0, 0.618);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+}
+
+.dormitory-post-content {
+    width: 80%;
+    height: 80%;
+    position: relative;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+

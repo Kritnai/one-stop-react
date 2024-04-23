@@ -1,0 +1,73 @@
+.PhysicalHealthSupport{
+    display: flex;
+    justify-content: center;
+}
+
+/* hospital */
+.hospital-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #41b06d57;
+    padding: 3%;
+}
+
+.map-hospital{
+    width: 100%;
+    height: 100%;
+}
+
+.align-hos{
+    display: block;
+    text-align: center;
+}
+
+.col-right img{
+    width: 30%;
+    border-radius: 50%;
+    
+}
+
+.col-right{
+    padding: 3%;
+}
+
+.col-right button{
+    width: calc(100% - 4%); /* Adjusted width to account for padding */
+    margin: 0 auto; /* Center the button */
+    box-sizing: border-box;
+}
+
+.col-right p{
+    font-family: monospace;
+    padding: 2%;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* well being */
+.well-being-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 3%;
+}
+
+.well-being-info{
+    background-color: #41b06d57;
+}
+
+.map-sc1{
+    width: 100%;
+    height: 100%;   
+}
+
+.well-being-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #d2d2d2;
+    padding: 3%;
+}
+.align-well{
+    display: block;
+    text-align: center;
+    
+}

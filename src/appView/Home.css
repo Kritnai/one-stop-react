@@ -1,0 +1,89 @@
+.Home{
+  background-color: #fff;
+}
+/* login side */
+.login-sec {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 10px;
+}
+
+.home-col-left img{
+  width: 100%;
+}
+
+.outer-c {
+  padding: 2%;
+  border-radius: 10px;
+  background-color: #B67352;
+}
+
+/* column left */
+.home-col-right form {
+  padding: 2%;
+  border-radius: 10px;
+  background-color: #ECB159;
+}
+
+.home-col-right form input {
+  margin: 5px;
+  margin-top: 10px;
+  border-style: none;
+  border-radius: 5px;
+  padding: 2%;
+  background-color: white;
+}
+
+.home-col-right input[type="submit"]:hover {
+  transition-duration: 0.8s;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.staffInfo button {
+  margin-top: 2%;
+  padding: 5%;
+  border-radius: 5px;
+  border-style: none;
+  background-color: #B67352;
+  width: 100%;
+  font-size: 80%;
+}
+
+
+.home-news{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 2%;
+  row-gap: 2%;
+  
+}
+
+.news-element{
+  padding: 3%;
+  border-radius: 5px;
+  background-color: #ECB159;
+}
+
+.home-contact{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 2%;
+  background-color: #ECB159;
+}
+
+/* responsive image */
+.responsive-img {
+  width: 100%;
+  height: auto;
+  max-width: fit-content;
+  max-height: 50%;
+  background-color: 1px solid red;
+}
+
+.scale-img {
+  max-width: 100%;
+  max-height: 120px;
+  object-fit: cover;
+}

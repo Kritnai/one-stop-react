@@ -1,0 +1,39 @@
+.RelatedPersons {
+    background-color: white;
+}
+
+.professor-item{
+    margin-top: 5%;
+}
+
+.alumni,
+.professor,
+.staff {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 2%;
+    row-gap: 2%;
+    text-align: center;
+}
+
+.professor-item {
+    border-radius: 5px;
+    margin: 5%;
+    padding: 3%;
+    border-radius: 5px;
+    background-color: #ECB159;
+}
+
+/* responsive image */
+.responsive-img {
+    width: 100%;
+    height: auto;
+    max-width: fit-content;
+    max-height: 50%;
+}
+
+.scale-img {
+    max-width: 100%;
+    max-height: 140px;
+    object-fit: cover;
+}
