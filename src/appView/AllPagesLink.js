@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./AllPageLink.css";
-
 function AllPageLink() {
+
+
     return (
         
         <div className="AllPageLink">
@@ -12,9 +13,10 @@ function AllPageLink() {
                 </div>
 
                 <div className="button-link">
-
                     <Link to="/"><button>Home</button></Link>
                     <iframe src="/"></iframe>
+                    <Link to="/login-success"><button>Log in success</button></Link>
+                    <iframe src="/login-success"></iframe>
                     <Link to="/Relate-Persons"><button>Relate-Persons</button></Link>
                     <iframe src="/Relate-Persons"></iframe>
                     <Link to="/reg-overview"><button>reg-overview</button></Link>
@@ -33,10 +35,10 @@ function AllPageLink() {
                     <iframe src="/consumption"></iframe>
                     <Link to="/transport"><button>Transport</button></Link>
                     <iframe src="/transport"></iframe>
-                    <Link to="/occupation"><button>Occupation</button></Link>
-                    <iframe src="/occupation"></iframe>
                     <Link to="/overviewSupport"><button>OverviewSupport</button></Link>
                     <iframe src="/overviewSupport"></iframe>
+                    <Link to="/occupation"><button>Occupation</button></Link>
+                    <iframe src="/occupation"></iframe>
 
                     <Link to="/physical-health-support"><button>physical-health-support</button></Link>
                     <iframe src="/physical-health-support"></iframe>

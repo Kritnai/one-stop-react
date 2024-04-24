@@ -1,17 +1,25 @@
 import React from "react";
 import AppHerderMember from "./component/AppHeaderMember";
 import AppFooter from "./component/AppFooter";
-import students from "../data/studentDB";
+// import students from "../data/studentDB";
 import "./RegOverview.css";
 import { Link } from "react-router-dom";
-
 import { useModel } from "../appModel/model";
+
+import { useNavigate } from 'react-router-dom';
+import { useUserAuth } from '../appModel/UserOfContext';
+import { Button } from 'react-bootstrap';
+
+function GetData(nameTable) {
+    const { data } = useModel(nameTable);
+    return data;
+}
 
 function RegOverview() {
     const studentID = "6510740000";
+    const students = GetData("studentDB");
 
-    const { data } = useModel("studentDB");
-    const getStudentInfoByID = data.filter((item) => {
+    const getStudentInfoByID = students.filter((item) => {
         return item.id.includes(studentID);
     })
     

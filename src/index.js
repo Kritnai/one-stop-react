@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.css";
 
@@ -20,8 +19,10 @@ import SchedulePlanning from './appView/SchedulePlanning';
 import RegOverview from './appView/RegOverview';
 import AllPageLink from './appView/AllPagesLink';
 import AllSportService from './appView/AllSportService';
+import LoginSuccess from './appView/LoginSuccess';
 
-
+import { UserAuthContextProvider } from './appModel/UserOfContext';
+import ProtectedRoute from './appModel/auth/ProtectedRoute';
 
 const router = createBrowserRouter([
   {
@@ -29,12 +30,16 @@ const router = createBrowserRouter([
     element: <Home />
   },
   {
-    path: '/Relate-Persons',
-    element: <RelatedPersons />
+    path: "/login-success",
+    element: <LoginSuccess />
   },
   {
-    path: "/LibraryService",
-    element: <LibraryServiceRoomMat />
+    path: "/reg-overview",
+    element: <RegOverview />
+  },
+  {
+    path: '/Relate-Persons',
+    element: <ProtectedRoute><RelatedPersons /></ProtectedRoute>
   },
   {
     path: "/Financial",
@@ -45,6 +50,18 @@ const router = createBrowserRouter([
     element: <AllSportService />
   },
   {
+    path: "/LibraryService",
+    element: <LibraryServiceRoomMat />
+  },
+  {
+    path: '/accommodation',
+    element: <Accommodation />
+  },
+  {
+    path: "/consumption",
+    element: <Consumption />
+  },
+  {
     path: "/transport",
     element: <Transport />
   },
@@ -53,9 +70,11 @@ const router = createBrowserRouter([
     element: <OverviewSupport />
   },
   {
-    path: '/accommodation',
-    element: <Accommodation />
+    path: "/occupation",
+    element: <OccupationSupport />
   },
+
+
   {
     path: "/physical-health-support",
     element: <PhysicalHealthSupport />
@@ -64,21 +83,11 @@ const router = createBrowserRouter([
     path: "/mental-health-support",
     element: <MentalHealthSupport />
   },
-  {
-    path: "/consumption",
-    element: <Consumption />
-  },
-  {
-    path: "/occupation",
-    element: <OccupationSupport />
-  },
+  
+ 
   {
     path: "/SchedulePlanning",
     element: <SchedulePlanning />
-  },
-  {
-    path: "/reg-overview",
-    element: <RegOverview />
   },
   {
     path: "/all-pages",
@@ -94,8 +103,9 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <UserAuthContextProvider>
+      <RouterProvider router={router} />
+    </UserAuthContextProvider>
   </React.StrictMode>
-
 );
 

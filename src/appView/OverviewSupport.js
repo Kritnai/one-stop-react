@@ -10,12 +10,11 @@ function OverviewSupport() {
             <section>
                 <div className="container">
                     <div className="list-link">
-                        <Link to="/accommodation" ><button className="btn btn-primary mt-3 p-5 w-100">to Accommodation</button></Link>
+                        <Link to="/occupation" ><button className="btn btn-primary mt-3 p-5 w-100">to Occupation</button></Link>
                         <Link to="/physical-health-support" ><button className="btn btn-primary mt-3 p-5 w-100">to PhysicalHealthSupport</button></Link>
                         <Link to="/mental-health-support" ><button className="btn btn-primary mt-3 p-5 w-100">to MentalHealthSupport</button></Link>
                     </div>
                 </div>
-
             </section>
 
             <AppFooter />

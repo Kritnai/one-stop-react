@@ -5,13 +5,13 @@ function AppHeaderGuest() {
             <div className="container">
                 <div className="head-contain">
                     <img src="/images/img-index/KockKoi-logo.png" width="10%" />
-
-                        <ul>
+                        <p>Log In For More Content</p>
+                        {/* <ul>
                             <li><a href="">ผู้สำเร็จการศึกษา</a></li>
                             <li><a href="">สมัครเรียน</a></li>
                             <li><a href="">สถิติ</a></li>
                             <li><a href="">ติดต่อเรา</a></li>
-                        </ul>
+                        </ul> */}
 
                 </div>
             </div>

@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useState } from 'react'
 import AppHeaderGuest from "./component/AppHeaderGuest";
 import AppFooter from "./component/AppFooter";
 import './Home.css';
-// import news from "../data/newsDB";
-import { Link } from "react-router-dom";
-
 import { useModel } from '../appModel/model';
+
+import { Link, useNavigate } from 'react-router-dom';
+import { Form, Alert, Button } from 'react-bootstrap';
+import { useUserAuth } from '../appModel/UserOfContext';
 
 function Home() {
     const { data } = useModel("newsDB");
@@ -17,6 +18,27 @@ function Home() {
             </div>
         );
     });
+
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
+    const { logIn } = useUserAuth();
+
+    let navigate = useNavigate();
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setError("");
+
+        try {
+            await logIn(email, password);
+            navigate('/login-success');
+        } catch (err) {
+            setError("email or password incorrect!");
+        }
+    }
+
+
     return (
         <div className="Home">
             <AppHeaderGuest />
@@ -52,12 +74,35 @@ function Home() {
 
                         <div className="home-col-right">
                             <div className="outer-c">
-                                <form>
+                                {/* <form>
                                     <h4>เข้าสู่ระบบ</h4>
                                     <input type="text" placeholder="student ID" />
                                     <input type="password" placeholder="password" />
                                     <input type="submit" value="LOGIN" />
-                                </form>
+                                </form> */}
+                                <h2 className='mb-3'>Log in</h2>
+                                {error && <Alert variant='danger'>{error}</Alert>}
+                                <Form onSubmit={handleSubmit}>
+                                    <Form.Group className='mb-3' controlId='formBasicEmail'>
+                                        <Form.Control
+                                            type='email'
+                                            placeholder='Email Address'
+                                            onChange={(e) => setEmail(e.target.value)}
+                                        />
+                                    </Form.Group>
+
+                                    <Form.Group className='mb-3' controlId='formBasicPassword'>
+                                        <Form.Control
+                                            type='password'
+                                            placeholder='Password'
+                                            onChange={(e) => setPassword(e.target.value)}
+                                        />
+                                    </Form.Group>
+
+                                    <div className='d-grid gar-2'>
+                                        <Button variant='primary' type='submit'>Sign In</Button>
+                                    </div>
+                                </Form>
                             </div>
 
                             <div className="staffInfo">
