@@ -22,15 +22,13 @@ function AppHerderMember() {
 
     return (
         <>
-            <header className="navbar navbar-expand-lg">
+            {/* <header className="navbar navbar-expand-lg">
                 <div className='container'>
                     <div className="head-contain container-fluid">
-                            <img className="navbar-brand" src="/images/img-index/KockKoi-logo.png" width="100%" />
-                            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span className="navbar-toggler-icon"></span>
-                            </button>
-                        
-
+                        <img className="navbar-brand" src="/images/img-index/KockKoi-logo.png" width="100%" />
+                        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span className="navbar-toggler-icon"></span>
+                        </button>
                         <div className='collapse navbar-collapse' id="navbarSupportedContent">
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li className='nav-item'><Link to="/login-success">หน้าหลัก</Link></li>
@@ -42,19 +40,16 @@ function AppHerderMember() {
                                 <li className='nav-item'><Link to="/consumption">ศูนย์อาหาร</Link></li>
                                 <li className='nav-item'><Link to="/transport">การคมนาคม</Link></li>
                                 <li className='nav-item'><Link to="/overviewSupport">การบริการ</Link></li>
-
                                 <li>{user.email}</li>
                                 <li><Button onClick={handleLogOut} variant='danger'>Log Out</Button></li>
                             </ul>
-
                         </div>
                     </div>
-
                 </div>
-            </header>
+            </header> */}
 
 
-            {/* <header>
+            <header>
                 <div class="container">
                     <div class="head-contain">
                         <img src="/images/img-index/KockKoi-logo.png" width="10%" />
@@ -76,7 +71,7 @@ function AppHerderMember() {
 
                     </div>
                 </div>
-            </header> */}
+            </header>
         </>
     );
 }

@@ -1,10 +1,7 @@
 header {
     display: flex;
-
-
     /* background-color: #B67352; */
     background-color: #41B06E;
-
 
 }
 
@@ -16,7 +13,7 @@ header li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1%;
+    margin: 1%;    
 }
 
 .navbar-nav{
@@ -32,12 +29,14 @@ header li {
 
 .head-contain ul {
     list-style: none;
-    display: flex;
+    display: flex;    
 }
 
-.head-contain ul li {
+.head-contain ul{
     margin: 0.5rem;
-
+}
+.head-contain li{
+    margin-left: 1rem;
 }
 
 .head-contain ul li a {
