@@ -16,8 +16,15 @@ function GetData(nameTable) {
 }
 
 function RegOverview() {
-    const studentID = "6510740000";
     const students = GetData("studentDB");
+    const { user } = useUserAuth();
+    const sData = GetData("studentRef");
+    const sid = sData.filter((stu) => {
+        return stu.id.includes(user.uid);
+    });
+    const studentID = sid.map((item, index) => {
+        return item.studentID;
+    })
 
     const getStudentInfoByID = students.filter((item) => {
         return item.id.includes(studentID);

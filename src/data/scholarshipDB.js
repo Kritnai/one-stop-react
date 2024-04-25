@@ -1,6 +1,6 @@
 const scholarships = [
     {
-        studentID:"1",
+        studentID:"6610749999",
         semester: "1/2566",
         scholarship: "TSE scolarship",
         amount: "100,000",
@@ -21,7 +21,7 @@ const scholarships = [
         funder: "TU",
     },
     {
-        studentID:"1",
+        studentID:"6610749999",
         semester: "2/2567",
         scholarship: "DSL",
         amount: "35,000",

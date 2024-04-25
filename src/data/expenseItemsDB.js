@@ -1,6 +1,6 @@
 const expenseItems = [
     {
-        studentID:"1",
+        studentID:"6610749999",
         date:"11 mar 2024",
         order:[
             "ค่าบำรุงสุขภาพ",

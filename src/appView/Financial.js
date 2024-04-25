@@ -6,7 +6,9 @@ import "./Financial.css";
 import ExpenseItem from "./component/ExpenseItem.js";
 import { useModel } from "../appModel/model.js";
 
-function GetData(tablename){
+import { useUserAuth } from "../appModel/UserOfContext.js";
+
+function GetData(tablename) {
     const { data } = useModel(tablename);
     return data;
 }
@@ -14,7 +16,18 @@ function GetData(tablename){
 function Financial() {
     const expenseItems = GetData("expenseItemsDB");
     const scholarships = GetData("scholarshipDB");
-    const studentID = "6510740000";
+
+
+    // get student id from reference
+    const { user } = useUserAuth();
+    const sData = GetData("studentRef");
+    const sid = sData.filter((stu) => {
+        return stu.id.includes(user.uid);
+    });
+    const studentID = sid.map((item, index) => {
+        return item.studentID;
+    })
+    
     //expense-items
     let total = 0;
     let overdue = 0;

@@ -31,11 +31,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/login-success",
-    element: <LoginSuccess />
+    element: <ProtectedRoute><LoginSuccess /></ProtectedRoute>
   },
   {
     path: "/reg-overview",
-    element: <RegOverview />
+    element: <ProtectedRoute><RegOverview /></ProtectedRoute>
   },
   {
     path: '/Relate-Persons',
@@ -43,51 +43,51 @@ const router = createBrowserRouter([
   },
   {
     path: "/Financial",
-    element: <Financial />
+    element: <ProtectedRoute><Financial /></ProtectedRoute>
   },
   {
     path: '/AllSportService',
-    element: <AllSportService />
+    element: <ProtectedRoute><AllSportService /></ProtectedRoute>
   },
   {
     path: "/LibraryService",
-    element: <LibraryServiceRoomMat />
+    element: <ProtectedRoute><LibraryServiceRoomMat /></ProtectedRoute>
   },
   {
     path: '/accommodation',
-    element: <Accommodation />
+    element: <ProtectedRoute><Accommodation /></ProtectedRoute>
   },
   {
     path: "/consumption",
-    element: <Consumption />
+    element: <ProtectedRoute><Consumption /></ProtectedRoute>
   },
   {
     path: "/transport",
-    element: <Transport />
+    element: <ProtectedRoute><Transport /></ProtectedRoute>
   },
   {
     path: "/overviewSupport",
-    element: <OverviewSupport />
+    element: <ProtectedRoute><OverviewSupport /></ProtectedRoute>
   },
   {
     path: "/occupation",
-    element: <OccupationSupport />
+    element: <ProtectedRoute><OccupationSupport /></ProtectedRoute>
   },
 
 
   {
     path: "/physical-health-support",
-    element: <PhysicalHealthSupport />
+    element: <ProtectedRoute><PhysicalHealthSupport /></ProtectedRoute>
   },
   {
     path: "/mental-health-support",
-    element: <MentalHealthSupport />
+    element: <ProtectedRoute><MentalHealthSupport /></ProtectedRoute>
   },
   
  
   {
     path: "/SchedulePlanning",
-    element: <SchedulePlanning />
+    element: <ProtectedRoute><SchedulePlanning /></ProtectedRoute>
   },
   {
     path: "/all-pages",

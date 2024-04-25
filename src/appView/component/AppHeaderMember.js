@@ -36,6 +36,7 @@ function AppHerderMember() {
                         <li><Link to="/transport">การคมนาคม</Link></li>
                         <li><Link to="/overviewSupport">การบริการ</Link></li>
                         
+                        <li>{user.email}</li>
                         <li><Button onClick={handleLogOut} variant='danger'>Log Out</Button></li>
 
                     </ul>

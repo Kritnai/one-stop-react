@@ -27,9 +27,17 @@ function LoginSuccess() {
         );
     });
 
-    const studentID = "6510740000";
     const students = GetData("studentDB");
 
+    // get student id from reference
+    const { user } = useUserAuth();
+    const sData = GetData("studentRef");
+    const sid = sData.filter((stu) => {
+        return stu.id.includes(user.uid);
+    });
+    const studentID = sid.map((item, index) => {
+        return item.studentID;
+    })
     const getStudentInfoByID = students.filter((item) => {
         return item.id.includes(studentID);
     })
@@ -37,25 +45,9 @@ function LoginSuccess() {
     const studentInfoElement = getStudentInfoByID.map((item, index) => {
         return (
             <>
-                {/* <div className="student-info">
-                <div className="name-element">
-
-                    <h3>{item.name}</h3>
-                    <p>{item.branch}</p>
-
-                </div>
-                <div className="num-info">
-                    <div className="info-element">
-                        <h3>{item.id}</h3>
-                        <p>รหัสนักศึกษา</p>
-                    </div>
-                </div>
-            </div> */}
-
                 <p className='success-info'>{item.name}</p>
                 <p className='success-info'>{item.branch}</p>
                 <p className='success-info'>{item.id}</p>
-
             </>
         );
     });
