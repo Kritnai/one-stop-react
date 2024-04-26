@@ -6,7 +6,7 @@ function StudyRoomItem(props) {
     return (
         <div className="card">
             <img className="card-img-top" src={room.thumbnailUrl} />
-            <a href="" className='card-text'><button>{room.title}</button></a>
+            <button className='card-text'>{room.title}</button>
         </div>
     );
 }

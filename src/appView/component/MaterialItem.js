@@ -5,7 +5,7 @@ function MaterialItem(props) {
     return (
         <div className="card">
             <img className="card-img-top" src={material.thumbnailUrl} />
-            <a href="" className='card-text'><button>{material.title}</button></a>
+            <button className='card-text'>{material.title}</button>
         </div>
    
 
