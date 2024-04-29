@@ -7,7 +7,7 @@ import { Button } from 'react-bootstrap';
 
 function AppHerderMember() {
     const { logOut, user } = useUserAuth();
-    console.log(user);
+    // console.log(user);
     const navigate = useNavigate();
 
     const handleLogOut = async () => {
